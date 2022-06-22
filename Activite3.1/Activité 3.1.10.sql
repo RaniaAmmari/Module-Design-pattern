@@ -1,0 +1,1 @@
+SELECT COUNT (film.duree_min) as nb_courtmetrage FROM `film` WHERE film.duree_min<= 42; 
