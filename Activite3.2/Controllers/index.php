@@ -7,6 +7,7 @@ $listArticles = $myArticles->getArticles();
 if (isset($_GET['url'])) {
     if($_GET['url'] == 'posterArticle'){
         include_once('../Views/posterArticle.php');
+        header('Location:index.php');
     }
     elseif ($_GET['url'] == 'home') {
         include_once('../Views/article.php');

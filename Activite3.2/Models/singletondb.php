@@ -11,10 +11,10 @@ class Newdatabase
     /**
     * La méthode statique qui permet d'instancier ou de récupérer l'instance unique
     **/
-    public static function getInstance($db)
+    public static function getInstance($article)
     {
         if (is_null(self::$_instance)) {
-            self::$_instance = new Config($db);
+            self::$_instance = new Config($article);
         }
         return self::$_instance;
     }
@@ -22,9 +22,9 @@ class Newdatabase
     /**
     * Le constrcuteur avec sa logique est privé pour émpêcher l'instanciation en dehors de la classe
     **/
-    private function __construct($db)
+    private function __construct($article)
     {
-        $this->settings = require($db);
+        $this->settings = require($article);
     }
 
     /**
