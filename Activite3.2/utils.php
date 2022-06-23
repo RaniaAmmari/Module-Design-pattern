@@ -1,3 +1,4 @@
+<?php include('connectDB.php') ?>
 <?php
 $articlesStatement = $db->prepare('SELECT * FROM articles');
 $articlesStatement->execute();
@@ -33,16 +34,16 @@ function getArticles($n=null){
       }  
     }
 
-// function deleteArticle($id){
-//         global $articles;
+function getComments($id){
+    global $db;
+    $commentsStatement = $db->prepare('SELECT * FROM commentaires WHERE article_id = :id');
+    $commentsStatement->execute([
+        'id'=>$id
+    ]);
+    $comments = $commentsStatement->fetchAll();
 
-//         foreach($articles as $key => $value){
-                
-//                 if($value['id'] === $id){
-//                         unset($articles[$key]);
-//                 }
-//         }
-// }
+    return $comments;
+}
 
 
 

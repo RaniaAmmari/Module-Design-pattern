@@ -12,13 +12,15 @@
                 <hr style="width:85%;margin:auto;margin-bottom:10px">
                 
                 
-                <?php
+                <!-- <?php
                 $commentsStatement = $db->prepare('SELECT * FROM commentaires WHERE article_id = :id');
                 $commentsStatement->execute([
                     'id'=>$article['id']
                 ]);
                 $comments = $commentsStatement->fetchAll();
-                 ?>
+                 ?> -->
+
+                <?php $comments = getComments($article['id']) ?>
                 
                 <?php if($comments):?>
                 <h4 style="margin-left:15px">Commentaires:</h4>

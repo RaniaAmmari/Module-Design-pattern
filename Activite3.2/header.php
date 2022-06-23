@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.php?url=home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="articles.php">Articles</a>
+          <a class="nav-link" href="article.php">Articles</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="posterUnArticle.php">Poster un article</a>
+          <a class="nav-link" href="index.php?url=posterArticle">Poster un article</a>
         </li>
       </ul>
     </div>
